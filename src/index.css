@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fredoka", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #5c94fc; /* Mario Sky Blue */
+  background-image: radial-gradient(rgba(255,255,255,0.3) 2px, transparent 2px);
+  background-size: 30px 30px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.mario-block {
+  background-color: #fbd000;
+  border: 4px solid #000;
+  box-shadow: inset -4px -4px 0px 0px rgba(0,0,0,0.2), inset 4px 4px 0px 0px rgba(255,255,255,0.5), 4px 4px 0px 0px rgba(0,0,0,0.3);
+  border-radius: 8px;
+}
+
+.mario-brick {
+  background-color: #c84c0c;
+  border: 4px solid #000;
+  box-shadow: inset -4px -4px 0px 0px rgba(0,0,0,0.3), inset 4px 4px 0px 0px rgba(255,150,100,0.5), 4px 4px 0px 0px rgba(0,0,0,0.3);
+  border-radius: 8px;
+}
+
+.mario-btn {
+  transition: all 0.1s;
+  border-bottom-width: 6px;
+}
+.mario-btn:active:not(:disabled) {
+  border-bottom-width: 2px;
+  transform: translateY(4px);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
