@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { GoogleGenAI } from '@google/genai';
-import { Send, Bot, User, Loader2, Sparkles } from 'lucide-react';
+import { Send, Loader2 } from 'lucide-react';
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
@@ -50,8 +50,8 @@ export default function AIChat() {
   return (
     <div className="flex flex-col h-full max-w-4xl mx-auto p-2 md:p-4">
       <div className="mb-6 text-center bg-white/90 p-4 rounded-2xl border-4 border-black shadow-lg">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#fbd000] text-black mb-4 border-4 border-black shadow-sm">
-          <Sparkles size={32} />
+        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#fbd000] text-black mb-4 border-4 border-black shadow-sm overflow-hidden">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Toad_3D_Land.png/220px-Toad_3D_Land.png" alt="Toad" className="w-16 h-16 object-contain mt-2" referrerPolicy="no-referrer" />
         </div>
         <h2 className="text-2xl md:text-3xl font-display font-bold text-black mb-2">Asistente de Estudio IA</h2>
         <p className="text-slate-700 font-bold max-w-2xl mx-auto">
@@ -68,10 +68,12 @@ export default function AIChat() {
               animate={{ opacity: 1, y: 0 }}
               className={`flex gap-3 md:gap-4 ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}
             >
-              <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-2 border-black ${
-                msg.role === 'user' ? 'bg-[#e52521] text-white' : 'bg-[#43b047] text-white'
+              <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 border-2 border-black overflow-hidden ${
+                msg.role === 'user' ? 'bg-[#43b047] text-white' : 'bg-white text-white'
               }`}>
-                {msg.role === 'user' ? <User size={20} /> : <Bot size={20} />}
+                {msg.role === 'user' 
+                  ? <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Luigi_NSMBUD.png/220px-Luigi_NSMBUD.png" alt="Luigi" className="w-10 h-10 object-contain mt-1" referrerPolicy="no-referrer" /> 
+                  : <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Toad_3D_Land.png/220px-Toad_3D_Land.png" alt="Toad" className="w-10 h-10 object-contain mt-1" referrerPolicy="no-referrer" />}
               </div>
               <div className={`max-w-[85%] md:max-w-[80%] rounded-2xl p-4 border-4 border-black font-bold ${
                 msg.role === 'user' 
@@ -88,8 +90,8 @@ export default function AIChat() {
               animate={{ opacity: 1, y: 0 }}
               className="flex gap-4"
             >
-              <div className="w-10 h-10 rounded-full bg-[#43b047] text-white flex items-center justify-center shrink-0 border-2 border-black">
-                <Bot size={20} />
+              <div className="w-12 h-12 rounded-full bg-white text-white flex items-center justify-center shrink-0 border-2 border-black overflow-hidden">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Toad_3D_Land.png/220px-Toad_3D_Land.png" alt="Toad" className="w-10 h-10 object-contain mt-1" referrerPolicy="no-referrer" />
               </div>
               <div className="bg-white border-4 border-black rounded-2xl rounded-tl-none p-4 flex items-center gap-2 text-black font-bold shadow-[4px_4px_0_0_rgba(0,0,0,0.2)]">
                 <Loader2 className="animate-spin" size={20} />

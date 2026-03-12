@@ -73,8 +73,9 @@ export default function App() {
       </main>
 
       {/* Watermark */}
-      <div className="fixed bottom-2 right-4 z-50 pointer-events-none">
-        <p className="font-display font-bold text-xl text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] opacity-90">
+      <div className="fixed bottom-2 right-4 z-50 pointer-events-none flex items-end gap-2">
+        <img src="https://upload.wikimedia.org/wikipedia/en/1/16/Princess_Peach_Stock_Art.png" alt="Peach" className="h-16 md:h-20 object-contain drop-shadow-md" referrerPolicy="no-referrer" />
+        <p className="font-display font-bold text-xl md:text-2xl text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] opacity-90 mb-2">
           Miss Karu
         </p>
       </div>

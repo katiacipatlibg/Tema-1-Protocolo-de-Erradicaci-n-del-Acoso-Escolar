@@ -47,8 +47,13 @@ export default function CaseStudies() {
           animate={{ scale: 1, opacity: 1 }}
           className="mario-block p-8 max-w-md w-full text-black"
         >
-          <div className="w-20 h-20 bg-white text-[#e52521] rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-black">
-            <CheckCircle2 size={40} />
+          <div className="h-32 flex items-center justify-center mx-auto mb-6">
+            <img 
+              src={score >= 10 ? "https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Yoshi_%28Nintendo_character%29.png/220px-Yoshi_%28Nintendo_character%29.png" : "https://upload.wikimedia.org/wikipedia/en/thumb/1/14/Bowser_-_New_Super_Mario_Bros_2.png/220px-Bowser_-_New_Super_Mario_Bros_2.png"} 
+              alt="Result Character" 
+              className="h-full object-contain drop-shadow-lg"
+              referrerPolicy="no-referrer"
+            />
           </div>
           <h2 className="text-3xl font-display font-bold mb-2 drop-shadow-sm">¡Nivel Completado!</h2>
           <p className="font-bold mb-6">Has resuelto todos los casos.</p>
