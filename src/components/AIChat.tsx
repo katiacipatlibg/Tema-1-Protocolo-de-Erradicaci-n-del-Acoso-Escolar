@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { GoogleGenAI } from '@google/genai';
 import { Send, Loader2 } from 'lucide-react';
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 export default function AIChat() {
   const [messages, setMessages] = useState<{ role: 'user' | 'model', text: string }[]>([
